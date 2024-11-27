@@ -1,3 +1,5 @@
+//Find the difference  of sum of all odd and even digits.
+
 #include<stdio.h>
 
 int main() {
