@@ -1,3 +1,5 @@
+// Program to fid the sum, largest, smallest , maximum sum and minimum sum in an array
+
 #include<stdio.h>
 
 int main() {
@@ -16,7 +18,7 @@ int main() {
     large = arr[0];
     sum = 0;
 
-    for( i=0; i<n; i++){
+    for( i=1; i<n; i++){
         if ( arr[i] < small ){
             small = arr[i];
         }
