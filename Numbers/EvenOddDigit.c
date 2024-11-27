@@ -2,7 +2,7 @@
 
 int main() {
 
-    int num, even=0, odd, rem, mul = 1;
+    int num, even=0, odd, rem, EvenMul = 1, OddMul = 1;
 
     printf("Enter a number:");
     scanf("%d",&num);
@@ -10,11 +10,12 @@ int main() {
     while ( num > 0 ) {
         rem = num % 10;
         if ( rem % 2 == 0 ) {
-            even = even * 10 + rem;
+            even = even + ( rem * EvenMul );
+            EvenMul *= 10;
         } else {
-            odd = odd * 10 + rem;
+            odd = odd + ( rem * OddMul );
+            OddMul *= 10;
         }
-        
         num = num / 10;
     }
     printf("Even numbers are: %d\n",even);
