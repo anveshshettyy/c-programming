@@ -2,7 +2,7 @@
 
 int main(){
 
-    int arr[10],res[10], i, j, k=0, n, temp
+    int arr[10],res[10], i, j, k=0, n, temp;
 
     printf("Enter the size of the array:");
     scanf("%d",&n);
