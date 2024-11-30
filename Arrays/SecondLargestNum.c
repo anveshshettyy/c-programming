@@ -10,7 +10,6 @@ int main(){
     printf("Enter the array elements:");
     for( i = 0; i< n ; i++ )
         scanf("%d",&arr[i]);
-        rtutu
 
     for( i=0; i<n; i++ ){
         
