@@ -20,14 +20,14 @@ int main() {
         temp = arr[0];
         for (i=1; i<n; i++) 
             arr[i-1] = arr[i];
-        
+
             arr[n-1] = temp;
     
     }
 
     printf("Rotated Element is:");
     for( i=0; i<n ; i++) {
-        printf("%d",arr[i]); 
+        printf(" %d ",arr[i]); 
     }
 
 
