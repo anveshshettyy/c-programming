@@ -2,7 +2,7 @@
 
 int main(){
 
-    int arr[10],res[10], i, j, k=0, n, temp;
+    int arr[10],res[10], i, j, k=0, n, temp, temp2=0;
 
     printf("Enter the size of the array:");
     scanf("%d",&n);
@@ -23,6 +23,16 @@ int main(){
     }
 
     printf("The Second Largest Element is:");
-    printf(" %d ",arr[1]);
+
+    for ( i = 0; i<n; i++ ){
+        if( arr[i] == arr[i+1] ){
+            temp2 = arr[i+2];
+            break;
+        }
+        else{
+            temp2 = arr[i+1];
+        }
+    }
+    printf("%d",temp2);
 
 }
