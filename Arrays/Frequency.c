@@ -10,13 +10,13 @@ int main() {
     printf("Enter the elements of the array:");
     for (i = 0; i < n; i++)
         scanf("%d", &arr[i]);
-
     for( i=0 ; i<n ; i++ ){
         count = 1;
         for( j=0; j<n ; j++ ){
             if( arr[i] == arr[j] && i != j ){
                 count = count+1;
             }
+            
         }
     }
 
