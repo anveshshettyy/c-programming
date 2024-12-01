@@ -18,32 +18,19 @@ void swap( int *p, int *q ){
     *q= temp;
 }
 
-void Sorting( int arr[] , int n,int k){
-    int i, j, status;
-    for( i=0; i<k-1; i++ ){
-        status = 0;
-        for( j=0; j<k-i-1; j++ ){
-            if( arr[j]>arr[j+1]){
-                swap( &arr[j], &arr[j+1] );
-                status = 1;
+void SelectionSort( int arr[], int n ){
+    int i, j, min;
+    for( i=0; i<n-1; i++ ){
+        min = i;
+        for( j=i+1; j<n; j++ ){
+            if( arr[min] > arr[j]){
+                min = j;
             }
         }
-        if( status == 0 )
-            break;
-    }
-    for( k; k<n-1; k++ ){
-        status = 0;
-        for( j=k; j<n-i-1; j++ ){
-            if( arr[j]<arr[j+1]){     
-                swap( &arr[j], &arr[j+1] );
-                status = 1;
-            }
-        }
-        if( status == 0 )
-            break;
+        swap( &arr[min], &arr[i] );
     }
 }
-
+ 
 
 int main() {
     int n,k, arr[10];
@@ -54,13 +41,12 @@ int main() {
     printf("Enter the elements of the array:");
     readArray( arr,  n);
 
-    printf("Enter k:");
-    scanf("%d",&k);
+
 
     printf("Before Sorting:");
     printArray( arr , n);
 
-    Sorting( arr , n , k);
+    SelectionSort( arr , n );
 
     printf("\nAfter Sorting:");
     printArray(arr , n);
