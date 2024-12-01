@@ -11,17 +11,19 @@ void printArray( int arr[], int n ){
         printf(" %d ",arr[i]);
 }
 
-void compare( int arr[], int x, int n){
+int compare( int arr[], int x, int n){
     int i,j,k;
-    for( i=0; i<n; i++ ){
-        for( j=i+1;j<n; j++ ){
+    for( i=0; i<n-2; i++ ){
+        for( j=i+1;j<n-1; j++ ){
             for( k=j+1; k<n; k++ ){
                 if( x == arr[i]+arr[j]+arr[k]){
                     printf("%d %d %d \n",arr[i],arr[j],arr[k]);
+                    return 1;
                 }
             }
         }
     }
+    return 0;
 }
 
 int main() {
@@ -37,7 +39,11 @@ int main() {
     printf("Enter x:");
     scanf("%d",&x);
 
-    compare( arr , x, n);
+    int z = compare( arr , x, n);
+
+    if( compare==0 ){
+        printf("No triplets found");
+    }
 
     return 0;
 }
