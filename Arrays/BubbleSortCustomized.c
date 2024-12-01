@@ -54,7 +54,6 @@ int main() {
     printf("Enter the elements of the array:");
     readArray( arr,  n);
 
-
     printf("Enter k:");
     scanf("%d",&k);
 
