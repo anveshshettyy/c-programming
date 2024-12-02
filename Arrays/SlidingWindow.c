@@ -26,9 +26,14 @@ int main(){
         }
         if( curr_sum == sum ){
             printf("Found between the index %d and %d  \n", start, i-1);
+            flag = 1;
+            break;
         }
         if( i<n )
             curr_sum = curr_sum + arr[i];
+    }
+    if( !flag ){
+        printf("No indexes found");
     }
 
 
