@@ -34,5 +34,8 @@ int main()
         } 
         if( flag == 1 )
             break;
+        
     }
+    if( !flag )
+        printf("No indexes found");   
 }
