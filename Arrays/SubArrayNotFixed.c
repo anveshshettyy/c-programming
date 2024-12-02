@@ -3,7 +3,7 @@
 int main()
 {
     int arr[10], n, sum, k;
-    int i, j, curr_sum, max_sum;
+    int i, j, curr_sum, max_sum, flag;
 
     printf("Enter the size of array:");
     scanf("%d", &n);
@@ -17,24 +17,22 @@ int main()
     printf("Enter the sum:");
     scanf("%d", &sum);
 
-    for (k = n-1; k >= 0; k--)
-    {
-        for (i = 0; i < k; i++)
-        {
-            curr_sum = curr_sum + arr[i];
-            if (curr_sum == sum)
-                printf("Sum found between indexes %d and %d \n", i, k);
-        }
+    for( i=0; i<n; i++ ){
+        flag = 0;
+        curr_sum = arr[i];
 
-        for (i = k; i < n; i++)
-        {
-            curr_sum = curr_sum + arr[i] - arr[i - k];
-
-            if (curr_sum == sum)
-            {
-                printf("Sum found between indexes %d and %d \n", i - k + 1, i);
+        for( j=i+1; j<n; j++){
+            if( curr_sum == sum ){
+                printf("Found between the index %d to %d",i, j-1);
+                flag = 1;
+                break;
             }
-        }
-        curr_sum = 0;
+            if( curr_sum > sum || j==n ){
+                break;
+            }
+            curr_sum = curr_sum + arr[j];
+        } 
+        if( flag == 1 )
+            break;
     }
 }
