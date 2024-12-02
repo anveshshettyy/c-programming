@@ -17,13 +17,13 @@ int main()
     printf("Enter the sum:");
     scanf("%d", &sum);
 
-    for (k = n; k >= 0; k--)
+    for (k = n-1; k >= 0; k--)
     {
         for (i = 0; i < k; i++)
         {
             curr_sum = curr_sum + arr[i];
             if (curr_sum == sum)
-                printf("Sum found between indexes %d and %d ", i, k);
+                printf("Sum found between indexes %d and %d \n", i, k);
         }
 
         for (i = k; i < n; i++)
@@ -32,7 +32,7 @@ int main()
 
             if (curr_sum == sum)
             {
-                printf("Sum found between indexes %d and %d ", i - k + 1, i);
+                printf("Sum found between indexes %d and %d \n", i - k + 1, i);
             }
         }
         curr_sum = 0;
