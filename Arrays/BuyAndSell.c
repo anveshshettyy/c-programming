@@ -11,8 +11,5 @@ int main(){
         scanf("%d",&stocks[i]);
     }
 
-    
-
-
     return 0;
 }
