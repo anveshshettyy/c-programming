@@ -5,6 +5,7 @@ int main(){
     char str[100];
     int count[SIZE] = { 0 };
     int i, flag = 1, frequency=0;
+    
     printf("Enter a string: ");
     scanf("%[^\n]s",str);
 
