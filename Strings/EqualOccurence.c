@@ -1,9 +1,9 @@
 #include<stdio.h>
-
+#define SIZE 26
 int main(){
 
     char str[100];
-    int count[100] = { 0 };
+    int count[SIZE] = { 0 };
     int i, flag = 1, frequency=0;
     
     printf("Enter a string: ");
@@ -18,7 +18,7 @@ int main(){
             count[str[i] - 'a']++;
     }
 
-    for( i=0; i<26; i++ )
+    for( i=0; i<SIZE; i++ )
     {
         if( count[i] > 0 ){
             if( frequency == 0 )
@@ -27,10 +27,10 @@ int main(){
             {
                 flag = 0;
                 break;
-            }
-                
+            } 
         }
     }
+
     if( flag )
         printf("Equal Occurence");
     else
