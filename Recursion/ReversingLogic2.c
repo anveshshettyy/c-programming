@@ -33,6 +33,7 @@ int main()
     char *t=(char *)malloc(100*sizeof(char *));
     char *p=NULL;
     int a;
+    
     printf("Enter String: ");
     scanf("%[^\n]s",t);
     p=rev(t);
