@@ -12,7 +12,7 @@ void RevString( char *p )
 int main()
 {
     char revString[100];
-    RevString("Hello");
+    RevString("jack and jill");
 
     return 0;
 }
