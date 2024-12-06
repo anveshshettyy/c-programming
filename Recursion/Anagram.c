@@ -18,7 +18,6 @@ int main()
         printf("Not an Anagram");
         return 0;
     }
-        
 
     for( i=0; str1[i]; i++ )
     {
@@ -35,6 +34,6 @@ int main()
     }
 
     printf("It is an anagram");
-    
+
     return 0;
 }
