@@ -24,8 +24,5 @@ int main() {
             printf(" %c ( %d )... ", i + 'a', count[i]);
     }
 
-
-
-
     return 0;
 }
