@@ -10,8 +10,7 @@ int main()
     printf("Enter a string: ");
     scanf("%[^\n]s", str);
 
-    while (getchar() != '\n')
-        ;
+    while (getchar() != '\n');
 
     printf("Enter a character: ");
     scanf("%c", &chr);
