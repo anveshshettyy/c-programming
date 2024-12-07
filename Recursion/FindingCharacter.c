@@ -4,7 +4,7 @@ int FindChar(char  str[], char chr, int i )
 {
 
     if(str[i] == '\0')
-        return 0;
+        return -1;
 
     if( str[i] == chr )
         return i;
@@ -27,15 +27,12 @@ int main()
     printf("Enter a character ");
     scanf("%c",&chr);
 
-    // for( i=0; str[i]; i++ )
-    // {
-    //     if(str[i] == chr)
-    //         printf("Character found at index %d \n",i);
-    // }
-
     int index = FindChar( str, chr, i );
 
-    printf("Character found at index %d \n",index);
+    if( index != -1 )
+        printf("Character found at index %d",index);
+    else
+        printf("String Not found");
 
     return 0;
 }
