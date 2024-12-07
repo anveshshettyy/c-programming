@@ -1,29 +1,46 @@
 #include<stdio.h>
 
-// char FindChar(char  str[] )
-// {
-//     if( str == ' ' )
-//         return 0;
+int FindChar(char  str[], char chr )
+{
+    int i = 0;
 
-//     else FindChar(str++);
-// }
+    if(!str)
+        return 0;
+
+    else
+    {
+        if( str[i] == chr )
+        {
+            return i;
+        }
+        FindChar(str[i+1]);
+    }
+}
 
 int main()
 {
 
     char str[100];
     char chr;
+    int i;
 
     printf("Enter a string: ");
     scanf("%[^\n]s",str);
 
+    while( getchar() != '\n' );
+
     printf("Enter a character ");
-    scanf("%c",chr);
+    scanf("%c",&chr);
 
-    printf("%c",char);
+    // for( i=0; str[i]; i++ )
+    // {
+    //     if(str[i] == chr)
+    //         printf("Character found at index %d \n",i);
+    // }
 
-    // FindChar( str );
+    int index = FindChar( str, chr );
 
+    printf("Character found at index %d \n",index);
 
 
     return 0;
