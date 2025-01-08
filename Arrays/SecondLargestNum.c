@@ -26,5 +26,6 @@ int main(){
 
     printf("The Second Largest Element is:");
     printf(" %d ",secondLargest);
+    
 
 }
