@@ -24,8 +24,6 @@ int main(){
     printf("Enter a String: ");
     scanf("%[^\n]s",str1);
 
-    
-
     copy( str1 , str2 );
 
     printf("Copied String is: %s", str2);
