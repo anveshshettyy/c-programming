@@ -1,39 +1,32 @@
 #include<stdio.h>
+#include<string.h>
 
-searchString( int str1[],int str2[] )
+int searchString( char str1[],char str2[] )
 {
-    int i,j,length1, length2;
+    char *result;
 
-    while( str1 )
-        length1++;
-
-    while( str2 )
-        length2++;
-
-    for( i=0; i<= length1-length2; i++ )
-    {
-        
-    }
+    result = strstr( str1, str2 );
+    return ( result ) ? 1 : 0;
+    
 }
 
 int main() {
 
-    int str1[100], str2[100];
+    char str1[100], str2[100];
 
     printf("Enter the string: ");
-    scanf("%s[^/n]",str1);
-
-    printf("Enter the substring to search: ");
-    scanf("%s[^/n]",str2);
+    scanf("%[^\n]s",str1);
 
     while( getchar() != '\n' );
 
-    searchString( str1, str2 );
+    printf("Enter the substring to search: ");
+    scanf("%[^\n]s",str2);
 
-    if( (searchString) == 1 )
+    if( (searchString( str1, str2 )) == 1 )
         printf("Found");
-
-    printf("Not Found");
+    else{
+        printf("Not Found");
+    } 
 
     return 0;
 }
