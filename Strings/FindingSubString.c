@@ -1,33 +1,30 @@
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
-    char str1[100], str2[100];
-    int i, j;
-    int res[10]={0};
+
+    char str[100];
+    char chr;
+    int i = 0;
 
     printf("Enter a string: ");
-    scanf("%[^\n]s",str1);
+    scanf("%[^\n]s", str);
 
-    while( getchar() != '\n' );
+    while (getchar() != '\n');
 
-    printf("Enter a sub string: ");
-    scanf("%[^\n]s",str2);
+    printf("Enter a character: ");
+    scanf("%c", &chr);
 
-    for( i = 0; str1[i]; i++ )
+    for (i = 0; str[i]; i++)
     {
-        for( j=i; str1[j]; j++ )
+        if (str[i] == chr)
         {
-            if( str1[i] == str2[j] )
-                res[i] = i;
-                
+            printf("Character found at index %d \n", i);
+            return 0;
         }
     }
-    for( i=0; i<n; i++ )
-        printf("%d",res);
-    
 
-
+    printf("Character not found");
 
     return 0;
 }
