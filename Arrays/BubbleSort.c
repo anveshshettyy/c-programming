@@ -22,7 +22,6 @@ void swap( int *p, int *q ){
 
 void bubbleSort(int arr[], int n){
     int i, j,status;
-
     for( i=0; i<n; i++ ){
         status = 0;
         for( j=0; j<n-1-i; j++){
