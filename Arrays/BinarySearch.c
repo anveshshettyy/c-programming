@@ -14,6 +14,7 @@ int main()
 
     printf("Enter the element to search: ");
     scanf("%d",&target);
+    
 
     left = 0;
     right = n - 1;
