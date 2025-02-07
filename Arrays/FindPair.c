@@ -46,7 +46,6 @@ void findSum2( int arr[], int n, int target ){
          else 
             left++;
     }
-
 }
 
 int main() {
