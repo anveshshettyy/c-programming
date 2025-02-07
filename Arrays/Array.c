@@ -11,9 +11,9 @@ int main() {
     scanf("%d",&n);
 
     printf("Enter the Elements of the array:");
-    for( i=0; i<n ; i++){
+    for( i=0; i<n ; i++)
         scanf("%d",&arr[i]);
-    }
+    
     small = arr[0];
     large = arr[0];
     sum = 0;
