@@ -40,12 +40,11 @@ void findSum2( int arr[], int n, int target ){
         if( sum == target ){
             printf("%d %d \n",arr[left], arr[right]);
             left++;
+            right--;  
+        } else if( sum > target )
             right--;
-        } else if( sum > target ){
-            right--;
-        } else {
+         else 
             left++;
-        }
     }
 
 }
